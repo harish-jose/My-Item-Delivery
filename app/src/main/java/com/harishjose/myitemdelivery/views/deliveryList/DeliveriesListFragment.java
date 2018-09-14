@@ -64,6 +64,9 @@ public class DeliveriesListFragment extends BaseFragment implements DeliveriesLi
         this.deliveriesArrayList.clear();
         this.deliveriesArrayList.addAll(dataList);
         if(this.deliveriesArrayList.size() == 0) {
+            binding.tvNoData.setVisibility(View.VISIBLE);
+        } else {
+            binding.tvNoData.setVisibility(View.GONE);
         }
         adapter.notifyDataSetChanged();
     }
